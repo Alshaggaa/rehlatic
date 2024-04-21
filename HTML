@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة حجوزات تشاركية للسيارات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>منصة حجوزات تشاركية للسيارات</h1>
+    </header>
 
+    <main>
+        <section class="driver-registration">
+            <h2>تسجيل السائقين</h2>
+            <form id="driver-registration-form">
+                <label for="driver-name">الاسم:</label>
+                <input type="text" id="driver-name" name="driver-name" required>
+
+                <label for="driver-phone">رقم الجوال:</label>
+                <input type="tel" id="driver-phone" name="driver-phone" required>
+
+                <label for="driver-email">البريد الإلكتروني:</label>
+                <input type="email" id="driver-email" name="driver-email" required>
+
+                <label for="driver-birthdate">تاريخ الميلاد:</label>
+                <input type="date" id="driver-birthdate" name="driver-birthdate" required>
+
+                <label for="car-color">لون السيارة:</label>
+                <input type="text" id="car-color" name="car-color" required>
+
+                <label for="car-model">موديل السيارة:</label>
+                <input type="text" id="car-model" name="car-model" required>
+
+                <label for="car-type">نوع السيارة:</label>
+                <select id="car-type" name="car-type" required>
+                    <option value="car">سيارة</option>
+                    <option value="van">فان</option>
+                    <option value="bus">حافلة</option>
+                </select>
+
+                <label for="car-seats">عدد المقاعد:</label>
+                <input type="number" id="car-seats" name="car-seats" min="1" required>
+
+                <label for="departure-place">مكان الانطلاق:</label>
+                <input type="text" id="departure-place" name="departure-place" required>
+
+                <label for="destination-city">المدينة المقصودة:</label>
+                <input type="text" id="destination-city" name="destination-city" required>
+
+                <label for="departure-date">تاريخ المغادرة:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+
+                <label for="departure-time">ساعة المغادرة:</label>
+                <input type="time" id="departure-time" name="departure-time" required>
+
+                <button type="submit">تسجيل الرحلة</button>
+            </form>
+        </section>
+
+        <section class="trip-search">
+            <h2>البحث عن رحلات</h2>
+            <form id="trip-search-form">
+                <label for="departure-place-search">مكان الانطلاق:</label>
+                <input type="text" id="departure-place-search" name="departure-place-search" required>
+
+                <label for="destination-city-search">المدينة المقصودة:</label>
+                <input type="text" id="destination-city-search" name="destination-city-search" required>
+
+                <label for="departure-date-search">تاريخ المغادرة:</label>
+                <input type="date" id="departure-date-search" name="departure-date-search" required>
+
+                <button type="submit">البحث</button>
+            </form>
+
+            <div id="trips-list">
+                </div>
+        </section>
+
+        <section class="trip-booking">
+            <h2>حجز رحلة</h2>
+            <div id="trip-details">
+                
