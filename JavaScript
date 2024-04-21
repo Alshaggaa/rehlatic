@@ -1,1 +1,97 @@
+// استخدم مكتبة خارجية مثل jQuery أو Ajax لتحسين معالجة طلبات JavaScript
+// سأقوم بشرح بعض الأمثلة باستخدام JavaScript الفانيليا
+
+// استخدم متغيرات لتخزين عناصر DOM
+const driverRegistrationForm = document.getElementById('driver-registration-form');
+const tripSearchForm = document.getElementById('trip-search-form');
+const tripsList = document.getElementById('trips-list');
+const tripDetails = document.getElementById('trip-details');
+
+// وظيفة لتسجيل رحلة جديدة
+function registerTrip() {
+    // احصل على قيم نموذج تسجيل السائق
+    const driverName = document.getElementById('driver-name').value;
+    const driverPhone = document.getElementById('driver-phone').value;
+    const driverEmail = document.getElementById('driver-email').value;
+    const driverBirthdate = document.getElementById('driver-birthdate').value;
+    const carColor = document.getElementById('car-color').value;
+    const carModel = document.getElementById('car-model').value;
+    const carType = document.getElementById('car-type').value;
+    const carSeats = document.getElementById('car-seats').value;
+    const departurePlace = document.getElementById('departure-place').value;
+    const destinationCity = document.getElementById('destination-city').value;
+    const departureDate = document.getElementById('departure-date').value;
+    const departureTime = document.getElementById('departure-time').value;
+
+    // قم بإنشاء رحلة جديدة
+    const trip = {
+        driverName,
+        driverPhone,
+        driverEmail,
+        driverBirthdate,
+        carColor,
+        carModel,
+        carType,
+        carSeats,
+        departurePlace,
+        destinationCity,
+        departureDate,
+        departureTime
+    };
+
+    // تخزين الرحلة في قاعدة بيانات (اختياري)
+    // يمكنك استخدام قاعدة بيانات محلية مثل IndexedDB أو قاعدة بيانات خارجية مثل Firebase
+    // سأترك هذا الجزء فارغًا في هذا المثال
+
+    // عرض رسالة تأكيد
+    alert('تم تسجيل رحلتك بنجاح!');
+
+    // مسح نموذج تسجيل السائق
+    driverRegistrationForm.reset();
+}
+
+// وظيفة للبحث عن رحلات
+function searchTrips() {
+    // احصل على قيم نموذج البحث عن الرحلات
+    const departurePlaceSearch = document.getElementById('departure-place-search').value;
+    const destinationCitySearch = document.getElementById('destination-city-search').value;
+    const departureDateSearch = document.getElementById('departure-date-search').value;
+
+    // ابحث عن رحلات مطابقة في قاعدة بيانات (اختياري)
+    // يمكنك استخدام قاعدة البيانات المحلية أو الخارجية التي اخترتها
+    // سأترك هذا الجزء فارغًا في هذا المثال
+
+    // عرض قائمة الرحلات المتاحة
+    const trips = [
+        // ... رحلة 1
+        // ... رحلة 2
+        // ...
+    ];
+
+    tripsList.innerHTML = '';
+    trips.forEach(trip => {
+        const tripElement = document.createElement('li');
+        tripElement.innerHTML = `
+            <h3>${trip.driverName}</h3>
+            <p>
+                <span>مكان الانطلاق:</span> ${trip.departurePlace}
+                <span>المدينة المقصودة:</span> ${trip.destinationCity}
+                <span>تاريخ المغادرة:</span> ${trip.departureDate}
+                <span>ساعة المغادرة:</span> <span class="math-inline">\{trip\.departureTime\}
+</p\>
+<button onclick\="showTripDetails\('</span>{trip.id}')">عرض التفاصيل</button>
+        `;
+        tripsList.appendChild(tripElement);
+    });
+}
+
+// وظيفة لعرض تفاصيل رحلة
+function showTripDetails(tripId) {
+    // احصل على تفاصيل الرحلة من قاعدة البيانات (اختياري)
+    // يمكنك استخدام قاعدة البيانات المحلية أو الخارجية التي اخترتها
+    // سأترك هذا الجزء فارغًا في هذا المثال
+
+    // عرض تفاصيل الرحلة في قسم "تفاصيل الرحلة"
+    tripDetails.innerHTML = `
+        <h3>${trip.
 
